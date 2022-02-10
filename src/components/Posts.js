@@ -1,6 +1,9 @@
 // Import libraries
 import axios from "axios";
 
+// Import components
+import { render as Post } from "./Post";
+
 // Import configs
 import { state, setState } from "../state";
 import { getEl, createEl } from "../helpers.js";
@@ -44,6 +47,8 @@ export function render() {
 
     article.querySelector(".entry-title a").addEventListener("click", event => {
       event.preventDefault();
+      setState("post", post);
+      Post();
     });
 
     getEl(main).append(article);

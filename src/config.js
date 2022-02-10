@@ -5,3 +5,7 @@ export const sidebar = "secondary";
 export const main = "main";
 export const siteName = "site-title";
 export const siteDescription = "site-description";
+
+// UI Elements
+
+export const backBtn = "back-to-post";

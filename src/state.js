@@ -3,7 +3,8 @@ const state = {
   restUrl: "https://api-auth.local/wp-json/",
   siteName: "Site Name",
   siteDescription: "Just another decoupled site",
-  posts: null
+  posts: null,
+  post: null
 };
 /**
  * Handles updating the state
