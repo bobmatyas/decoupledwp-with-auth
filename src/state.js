@@ -1,6 +1,9 @@
 // Set state object with values that are changed programatically
 const state = {
-  restUrl: "https://api-auth.local/wp-json/"
+  restUrl: "https://api-auth.local/wp-json/",
+  siteName: "Site Name",
+  siteDescription: "Just another decoupled site",
+  posts: null
 };
 /**
  * Handles updating the state
