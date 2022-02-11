@@ -12,6 +12,8 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+.hidden { display: none !important; }
+
 body {
     background-color: #fff;
     font-family: "Open Sans", sans-serif;
