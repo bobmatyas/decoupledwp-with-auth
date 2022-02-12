@@ -1,5 +1,6 @@
 // Import components
 import { render as Posts, clear as clearPosts } from "./Posts";
+import { loadPost } from "./Editor";
 
 // Import configs
 import { state, setState } from "../state";
@@ -21,8 +22,34 @@ export function render() {
         Posts();
     });
 
+    if (state.loggedIn) {
+      article.appendChild( editLink(state.post));
+    }
+    
     clearPosts();
     getEl(main).append(article);
 };
+
+
+/**
+ * Creates edit link for post
+ *
+ * @export
+ * @param {object} post to be edited
+ */
+export function editLink(post) {
+
+  const link = createEl("a");
+  link.href= "#edit-post";
+  link.classList.add("edit");
+  link.innerText = "Edit";
+
+  link.addEventListener("click", () => {
+    setState("editorPost", post.id);
+    loadPost();
+  });
+
+  return link;
+}
 
 

@@ -2,7 +2,7 @@
 import axios from "axios";
 
 // Import components
-import { render as Post } from "./Post";
+import { render as Post, editLink } from "./Post";
 
 // Import configs
 import { state, setState } from "../state";
@@ -50,6 +50,10 @@ export function render() {
       setState("post", post);
       Post();
     });
+
+    if (state.loggedIn) {
+      article.appendChild( editLink(post));
+    }
 
     getEl(main).append(article);
   });

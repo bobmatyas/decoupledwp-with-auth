@@ -6,7 +6,8 @@ const state = {
   siteName: "Site Name",
   siteDescription: "Just another decoupled site",
   posts: null,
-  post: null
+  post: null,
+  editorPost: null
 };
 /**
  * Handles updating the state

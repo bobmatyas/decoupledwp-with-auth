@@ -64,7 +64,7 @@ export function logout() {
   removeEl(logoutForm);
   removeEl(editor);
   LoginForm();
-  Notice("loggedout");
+  //Notice("loggedout");
   Posts();
 }
 
