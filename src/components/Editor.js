@@ -132,3 +132,5 @@ export function clear() {
   // Set the form method back to post
   setState("editorPost", null);
 }
+
+
