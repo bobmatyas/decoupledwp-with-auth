@@ -45,6 +45,7 @@ export function login() {
   setState("loggedIn", true);
   // Toggle login/logout forms
   removeEl(loginForm);
+  Notice("loggedin");
   LogoutForm();
   Editor();
   // Init and render posts
@@ -63,6 +64,7 @@ export function logout() {
   removeEl(logoutForm);
   removeEl(editor);
   LoginForm();
+  Notice("loggedout");
   Posts();
 }
 
